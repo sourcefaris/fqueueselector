@@ -1,0 +1,19 @@
+<project name="queue-selector" default="queue-selector" basedir="../bin">
+	<target name="queue-selector">
+		<patternset id="queue-selector-patternset">
+			<include name="com/permata/queue/client/*.*" />
+			<include name="com/permata/queue/forms/*.*" />
+			<include name="com/permata/queue/res/*.*" />
+			<include name="com/permata/queue/res/preferred/*.*" />
+		</patternset>
+		<jar destfile="../build/queue-selector-tmp.jar">
+			<fileset dir="." casesensitive="yes">
+				<patternset refid="queue-selector-patternset" />
+			</fileset>
+		</jar>
+		<signjar jar="../build/queue-selector-tmp.jar" alias="permata"
+			keystore="../scripts/.keystore" storepass="password" verbose="false"
+			signedjar="../build/queue-selector.jar" />
+			
+	</target>
+</project>

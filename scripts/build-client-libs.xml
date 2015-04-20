@@ -1,0 +1,38 @@
+<project name="queue-selector" default="queueselector-all-libs" basedir="..">
+
+<target name="queueselector-all-libs">
+	<signjar jar="./lib/admin.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/admin.jar"/>
+
+	<signjar jar="./lib/commons-beanutils.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/commons-beanutils.jar"/>
+
+	<signjar jar="./lib/commons-collections-2.1.1.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/commons-collections-2.1.1.jar"/>
+	
+	<signjar jar="./lib/commons-logging-1.0.4.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/commons-logging-1.0.4.jar"/>
+	
+	<signjar jar="./lib/formsrt.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/formsrt.jar"/>
+
+	<signjar jar="./lib/jasperreports-3.0.0.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/jasperreports-3.0.0.jar"/>
+	
+	<signjar jar="./lib/jcalendar.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/jcalendar.jar"/>
+	
+	<signjar jar="./lib/sns-rubean.jar" alias="permata" 
+	keystore="scripts/.keystore" storepass="password" verbose="false" 
+	signedjar="./build/sns-rubean.jar"/>
+				
+</target>	
+
+</project>

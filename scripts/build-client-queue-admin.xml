@@ -1,0 +1,16 @@
+<project name="queue-selector" default="queue-selector" basedir="../bin">
+	<target name="queue-selector">
+		<patternset id="selector-admin-patternset">
+			<include name="com/permata/queue/admin/**/*.*" />
+		</patternset>
+		<jar destfile="../build/selector-admin-tmp.jar">
+			<fileset dir="." casesensitive="yes">
+				<patternset refid="selector-admin-patternset" />
+			</fileset>
+		</jar>
+		<signjar jar="../build/selector-admin-tmp.jar" alias="permata"
+			keystore="../scripts/.keystore" storepass="password" verbose="false"
+			signedjar="../build/selector-admin.jar" />
+			
+	</target>
+</project>

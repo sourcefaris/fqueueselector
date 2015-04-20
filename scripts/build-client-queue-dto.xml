@@ -1,0 +1,16 @@
+<project name="queue-selector" default="queue-selector" basedir="../bin">
+	<target name="queue-selector">
+		<patternset id="selector-dto-patternset">
+			<include name="com/permata/queue/dto/*.*" />
+		</patternset>
+		<jar destfile="../build/selector-dto-tmp.jar">
+			<fileset dir="." casesensitive="yes">
+				<patternset refid="selector-dto-patternset" />
+			</fileset>
+		</jar>
+		<signjar jar="../build/selector-dto-tmp.jar" alias="permata"
+			keystore="../scripts/.keystore" storepass="password" verbose="false"
+			signedjar="../build/selector-dto.jar" />
+			
+	</target>
+</project>
